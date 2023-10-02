@@ -5,7 +5,7 @@
   - Employee job title
   - Employee email
   - Date joined
-  - Empoyee Avatar
+  - Employee Avatar
   - Employee favorite color displayed in the background of their card and profile
 
   Another feature is for employees to check for available rooms in the office. If the room is available then it will read 'OPEN' and if not 'OCCUPIED.' There is also a max occupancy attached for each room.
