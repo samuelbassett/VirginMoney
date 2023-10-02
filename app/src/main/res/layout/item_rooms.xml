@@ -10,6 +10,9 @@
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -38,15 +41,15 @@
                 android:ellipsize="end"
                 android:textSize="32dp"
                 android:textStyle="bold"
-                android:textColor="#55FF0000"
-                android:maxLines="3"
+                android:textColor="#55000000"
+                android:maxLines="1"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toEndOf="@id/roomNumberTextView"
-                app:layout_constraintBottom_toTopOf="@id/occupencyTextView"
+                app:layout_constraintBottom_toTopOf="@id/occupancyTextView"
                 app:layout_constraintEnd_toEndOf="parent"/>
 
             <TextView
-                android:id="@+id/occupencyTextView"
+                android:id="@+id/occupancyTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Max Occupency: 34267"

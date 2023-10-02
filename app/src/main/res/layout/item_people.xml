@@ -10,16 +10,17 @@
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardUseCompatPadding="true"
         app:cardCornerRadius="16dp"
-        app:cardElevation="2dp"
-        app:cardBackgroundColor="#45FFFFFF"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="16dp">
+            android:padding="16dp"
+            android:background="#45FF0000">
 
             <ImageView
                 android:id="@+id/imageView"
@@ -40,10 +41,10 @@
                 android:text="Maggie Brekke"
                 android:textSize="28dp"
                 android:maxLines="1"
+                android:ellipsize="end"
                 android:textStyle="bold"
                 android:paddingLeft="10dp"
                 app:layout_constraintStart_toEndOf="@+id/imageView"
-                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toTopOf="@id/descriptionTextView"/>
 

@@ -8,8 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.tc.virginmoney.databinding.FragmentPeopleBinding
-import com.tc.virginmoney.ui.people.data.PeopleItemModel
-import java.util.ArrayList
 
 class PeopleFragment : Fragment() {
 
@@ -33,30 +31,20 @@ class PeopleFragment : Fragment() {
 
          peopleViewModel.peopleData.observe(viewLifecycleOwner){
             it?.let {
-//                showData(it)
                 binding.recyclerPeopleView.apply {
                     layoutManager = LinearLayoutManager(context)
-                    adapter = peopleAdapter
+                    adapter = PeopleAdapter(it)
                 }
             }
         }
 
         peopleAdapter = PeopleAdapter(arrayListOf())
 
-//        binding.recyclerPeopleView.apply {
-//            layoutManager = LinearLayoutManager(context)
-//            adapter = peopleAdapter
-//        }
-
         peopleViewModel.getPeople()
         
         return root
     }
-
-    private fun showData(data: ArrayList<PeopleItemModel>) {
-        peopleAdapter.updateList(data)
-    }
-
+    
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
